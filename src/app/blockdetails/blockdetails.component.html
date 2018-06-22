@@ -1,0 +1,43 @@
+<app-header></app-header>
+
+<div class="container-fluid">
+
+  <div class="row" style="margin-top: 50px;">
+    <div class="col-md-8 offset-2">
+      <div class="card">
+        <div class="card-header">
+          Block information
+        </div>
+
+        <div class="card-body">
+          <div class="container row">
+            <div class="col-sm-3 block-detail-row">Hash:</div>
+            <div class="col-sm-9 block-detail-row">{{block.hash}}</div>
+            <div class="col-sm-3 block-detail-row">Type:</div>
+            <div class="col-sm-9 block-detail-row"><span class="badge badge-pill badge-primary">{{block.type}}</span></div>
+            <div class="col-sm-3 block-detail-row">Public key:</div>
+            <div class="col-sm-9 block-detail-row">{{block.public_key}}</div>
+            <div class="col-sm-3 block-detail-row">Linked public key:</div>
+            <div class="col-sm-9 block-detail-row">{{block.link_public_key}}</div>
+            <div class="col-sm-3 block-detail-row">Block height:</div>
+            <div class="col-sm-9 block-detail-row">{{block.sequence_number}}</div>
+            <div class="col-sm-3 block-detail-row">Linked block height:</div>
+            <div class="col-sm-9 block-detail-row">{{block.link_sequence_number}}</div>
+            <div class="col-sm-3 block-detail-row">Timestamp:</div>
+            <div class="col-sm-9 block-detail-row">{{block.timestamp | date: 'yyyy-MM-dd HH:mm:ss'}}</div>
+            <div class="col-sm-3 block-detail-row">Signature:</div>
+            <div class="col-sm-9 block-detail-row">{{block.signature}}</div>
+            <div class="col-sm-3 block-detail-row">Previous hash:</div>
+            <div class="col-sm-9 block-detail-row"><a routerLink="/blocks/{{block.previous_hash}}">{{block.previous_hash}}</a></div>
+            <div class="col-sm-3 block-detail-row">Transaction:</div>
+            <div class="col-sm-9 block-detail-row"><div class="box box-default">
+              <code>
+                <pre>{{block.transaction |json}}</pre>
+              </code>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

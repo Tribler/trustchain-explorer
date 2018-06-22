@@ -1,5 +1,4 @@
 export class Block {
-  hash: string;
   public_key: string;
   link_public_key: string;
   sequence_number: string;

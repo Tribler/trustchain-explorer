@@ -12,6 +12,11 @@ export class BlocksService {
 
   getRecentBlocks(): Observable<Block[]> {
     const url = 'http://130.161.119.211/trustchain/recent';
-    return this.http.get(url);
+    return this.http.get<Block[]>(url);
+  }
+
+  getBlock(hash: string): Observable<Block> {
+    const url = 'http://130.161.119.211/trustchain/blocks/' + hash;
+    return this.http.get<Block>(url);
   }
 }
