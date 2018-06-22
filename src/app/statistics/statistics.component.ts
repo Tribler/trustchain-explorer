@@ -17,7 +17,7 @@ export class StatisticsComponent implements OnInit {
   }
 
   getStatistics(): void {
-    this.statisticsService.getStatistics().subscribe(statistics => this.statistics = statistics);
+    this.statisticsService.getStatistics().subscribe(statistics => this.statistics = statistics['statistics']);
   }
 
 }
