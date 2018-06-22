@@ -9,7 +9,7 @@ export class StatisticsService {
 
   constructor(private http: HttpClient) { }
 
-  getStatistics(): Observable<{string: string}> {
+  getStatistics(): Observable<any> {
     const url = 'http://130.161.119.211/trustchain/statistics';
     return this.http.get(url);
   }
