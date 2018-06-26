@@ -19,4 +19,9 @@ export class BlocksService {
     const url = 'http://130.161.119.211/trustchain/blocks/' + hash;
     return this.http.get<any>(url);
   }
+
+  getLatestBlocks(pubkey: string): Observable<any> {
+    const url = 'http://130.161.119.211/trustchain/users/' + pubkey + '/blocks';
+    return this.http.get<any>(url);
+  }
 }

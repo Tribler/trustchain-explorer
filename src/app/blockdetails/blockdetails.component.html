@@ -40,4 +40,43 @@
       </div>
     </div>
   </div>
+
+  <div class="row" style="margin-top: 50px; margin-bottom: 30px;" *ngIf="block.linked">
+    <div class="col-md-8 offset-2">
+      <div class="card">
+        <div class="card-header">
+          Linked block information
+        </div>
+
+        <div class="card-body">
+          <div class="container row">
+            <div class="col-sm-3 block-detail-row">Hash:</div>
+            <div class="col-sm-9 block-detail-row">{{block.linked.hash}}</div>
+            <div class="col-sm-3 block-detail-row">Type:</div>
+            <div class="col-sm-9 block-detail-row"><span class="badge badge-pill badge-primary">{{block.linked.type}}</span></div>
+            <div class="col-sm-3 block-detail-row">Public key:</div>
+            <div class="col-sm-9 block-detail-row">{{block.linked.public_key}}</div>
+            <div class="col-sm-3 block-detail-row">Linked public key:</div>
+            <div class="col-sm-9 block-detail-row">{{block.linked.link_public_key}}</div>
+            <div class="col-sm-3 block-detail-row">Block height:</div>
+            <div class="col-sm-9 block-detail-row">{{block.linked.sequence_number}}</div>
+            <div class="col-sm-3 block-detail-row">Linked block height:</div>
+            <div class="col-sm-9 block-detail-row">{{block.linked.link_sequence_number}}</div>
+            <div class="col-sm-3 block-detail-row">Timestamp:</div>
+            <div class="col-sm-9 block-detail-row">{{block.linked.timestamp | date: 'yyyy-MM-dd HH:mm:ss'}}</div>
+            <div class="col-sm-3 block-detail-row">Signature:</div>
+            <div class="col-sm-9 block-detail-row">{{block.linked.signature}}</div>
+            <div class="col-sm-3 block-detail-row">Previous hash:</div>
+            <div class="col-sm-9 block-detail-row"><a routerLink="/blocks/{{block.linked.previous_hash}}">{{block.linked.previous_hash}}</a></div>
+            <div class="col-sm-3 block-detail-row">Transaction:</div>
+            <div class="col-sm-9 block-detail-row"><div class="box box-default">
+              <code>
+                <pre>{{block.linked.transaction |json}}</pre>
+              </code>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,0 +1,24 @@
+<div class="row row-margin-top">
+  <div class="col-md-10 offset-1">
+    <br/><h3>Latest blocks of user {{pubkey.slice(-8)}}:</h3><br/>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+        <tr><th>Number</th><th>Hash</th><th>Initiator</th><th>Counterparty</th><th>Timestamp</th><th>Type</th><th>Dual-signed?</th></tr></thead>
+        <tbody>
+        <tr *ngFor="let block of recent_blocks">
+          <td><a routerLink="/blocks/{{block.hash}}">{{block.sequence_number}}</a></td>
+          <td>{{block.hash.slice(-8)}}</td>
+          <td>{{block.public_key.slice(-8)}}</td>
+          <td><a routerLink="/users/{{block.link_public_key}}">{{block.link_public_key.slice(-8)}}</a></td>
+          <td>{{block.timestamp | date: 'yyyy-MM-dd HH:mm:ss'}}</td>
+          <td><span class="badge badge-pill badge-primary">{{block.type}}</span></td>
+          <td *ngIf="block.linked">Yes</td>
+          <td *ngIf="!block.linked">No</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>

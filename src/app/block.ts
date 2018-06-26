@@ -9,4 +9,5 @@ export class Block {
   timestamp: number;
   transaction: {string: string};
   type: string;
+  linked: Block;
 }

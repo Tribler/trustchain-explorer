@@ -10,6 +10,8 @@ import { RecentblocksComponent } from './recentblocks/recentblocks.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { BlockdetailsComponent } from './blockdetails/blockdetails.component';
+import { UserdetailsComponent } from './userdetails/userdetails.component';
+import { UserrecentblocksComponent } from './userrecentblocks/userrecentblocks.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { BlockdetailsComponent } from './blockdetails/blockdetails.component';
     StatisticsComponent,
     RecentblocksComponent,
     HomeComponent,
-    BlockdetailsComponent
+    BlockdetailsComponent,
+    UserdetailsComponent,
+    UserrecentblocksComponent
   ],
   imports: [
     BrowserModule,

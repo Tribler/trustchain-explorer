@@ -13,8 +13,8 @@
         <tbody>
         <tr *ngFor="let block of recent_blocks">
           <td><a routerLink="/blocks/{{block.hash}}">{{block.hash.slice(-8)}}</a></td>
-          <td>{{block.public_key.slice(-8)}}</td>
-          <td>{{block.link_public_key.slice(-8)}}</td>
+          <td><a routerLink="/users/{{block.public_key}}">{{block.public_key.slice(-8)}}</a></td>
+          <td><a routerLink="/users/{{block.link_public_key}}">{{block.link_public_key.slice(-8)}}</a></td>
           <td>{{block.timestamp | date: 'yyyy-MM-dd HH:mm:ss'}}</td>
           <td><span class="badge badge-pill badge-primary">{{block.type}}</span></td>
         </tr>
