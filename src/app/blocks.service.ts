@@ -10,8 +10,8 @@ export class BlocksService {
 
   constructor(private http: HttpClient) { }
 
-  getRecentBlocks(): Observable<any> {
-    const url = 'http://130.161.119.211/trustchain/recent';
+  getRecentBlocks(limit: number, offset: number): Observable<any> {
+    const url = 'http://130.161.119.211/trustchain/recent?limit=' + limit + '&offset=' + offset;
     return this.http.get<any>(url);
   }
 

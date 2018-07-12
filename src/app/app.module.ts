@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { BlockdetailsComponent } from './blockdetails/blockdetails.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { UserrecentblocksComponent } from './userrecentblocks/userrecentblocks.component';
+import { VisualizationComponent } from './visualization/visualization.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { UserrecentblocksComponent } from './userrecentblocks/userrecentblocks.c
     HomeComponent,
     BlockdetailsComponent,
     UserdetailsComponent,
-    UserrecentblocksComponent
+    UserrecentblocksComponent,
+    VisualizationComponent
   ],
   imports: [
     BrowserModule,

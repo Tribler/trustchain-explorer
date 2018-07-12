@@ -18,7 +18,7 @@ export class RecentblocksComponent implements OnInit {
   }
 
   getRecentBlocks(): void {
-    this.blocksService.getRecentBlocks().subscribe(recent_blocks => this.recent_blocks = recent_blocks.blocks);
+    this.blocksService.getRecentBlocks(15, 0).subscribe(recent_blocks => this.recent_blocks = recent_blocks.blocks);
   }
 
 }
