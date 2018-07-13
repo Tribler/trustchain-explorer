@@ -1,0 +1,21 @@
+<app-header></app-header>
+
+<div class="row row-margin-top">
+  <div class="col-md-10 offset-1">
+    <br/><h3>Most active users:</h3><br/>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+        <tr><th>Public key</th><th>Blocks created</th></tr></thead>
+        <tbody>
+        <tr *ngFor="let user of users">
+          <td><a routerLink="/users/{{user.public_key}}">{{user.public_key.slice(-8)}}</a></td>
+          <td>{{user.blocks}}</td>
+          <td></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>

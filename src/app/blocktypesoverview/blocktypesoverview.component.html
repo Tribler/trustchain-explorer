@@ -1,0 +1,21 @@
+<app-header></app-header>
+
+<div class="row row-margin-top">
+  <div class="col-md-10 offset-1">
+    <br/><h3>Most used block types:</h3><br/>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+        <tr><th>Type</th><th>Frequency</th></tr></thead>
+        <tbody>
+        <tr *ngFor="let types_statistic of types_statistics">
+          <td>{{types_statistic.type}}</td>
+          <td>{{types_statistic.count}}</td>
+          <td></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>

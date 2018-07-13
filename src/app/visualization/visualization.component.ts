@@ -1,12 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataSet, Network, network } from 'vis';
 import {BlocksService} from '../blocks.service';
-import {Block} from '../block';
-
-
-async function delay(ms: number) {
-  await new Promise(resolve => setTimeout(()=>resolve(), 1000)).then(() => console.log("fired"));
-}
 
 
 @Component({

@@ -13,4 +13,9 @@ export class StatisticsService {
     const url = 'http://130.161.119.211/trustchain/statistics';
     return this.http.get(url);
   }
+
+  getTypesStatistics(): Observable<any> {
+    const url = 'http://130.161.119.211/trustchain/statistics/types';
+    return this.http.get(url);
+  }
 }

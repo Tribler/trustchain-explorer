@@ -13,6 +13,8 @@ import { BlockdetailsComponent } from './blockdetails/blockdetails.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { UserrecentblocksComponent } from './userrecentblocks/userrecentblocks.component';
 import { VisualizationComponent } from './visualization/visualization.component';
+import { UsersoverviewComponent } from './usersoverview/usersoverview.component';
+import { BlocktypesoverviewComponent } from './blocktypesoverview/blocktypesoverview.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { VisualizationComponent } from './visualization/visualization.component'
     BlockdetailsComponent,
     UserdetailsComponent,
     UserrecentblocksComponent,
-    VisualizationComponent
+    VisualizationComponent,
+    UsersoverviewComponent,
+    BlocktypesoverviewComponent
   ],
   imports: [
     BrowserModule,
