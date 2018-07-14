@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {StatisticsService} from '../statistics.service';
+import {CookieService} from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-statistics',
@@ -10,14 +11,15 @@ export class StatisticsComponent implements OnInit {
 
   statistics: {string: string};
 
-  constructor(private statisticsService: StatisticsService) { }
+  constructor(private statisticsService: StatisticsService, private cookieService: CookieService) { }
 
   ngOnInit() {
     this.getStatistics();
   }
 
   getStatistics(): void {
-    this.statisticsService.getStatistics().subscribe(statistics => this.statistics = statistics['statistics']);
+    this.statisticsService.getStatistics().subscribe(
+      statistics => this.statistics = statistics['statistics']);
   }
 
 }

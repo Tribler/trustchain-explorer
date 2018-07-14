@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -15,6 +16,8 @@ import { UserrecentblocksComponent } from './userrecentblocks/userrecentblocks.c
 import { VisualizationComponent } from './visualization/visualization.component';
 import { UsersoverviewComponent } from './usersoverview/usersoverview.component';
 import { BlocktypesoverviewComponent } from './blocktypesoverview/blocktypesoverview.component';
+import { NetworkswitcherComponent } from './networkswitcher/networkswitcher.component';
+import {CookieService} from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -28,14 +31,16 @@ import { BlocktypesoverviewComponent } from './blocktypesoverview/blocktypesover
     UserrecentblocksComponent,
     VisualizationComponent,
     UsersoverviewComponent,
-    BlocktypesoverviewComponent
+    BlocktypesoverviewComponent,
+    NetworkswitcherComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
