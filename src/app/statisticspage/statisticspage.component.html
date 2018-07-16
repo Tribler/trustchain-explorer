@@ -1,0 +1,12 @@
+<app-header></app-header>
+
+<div id="visualization" class="graph-container"></div>
+
+<div class="row row-margin-top">
+  <div class="col-md-10 offset-1">
+    <br/><h3>TrustChain blocks created per day:</h3><br/>
+    <div *ngIf="chart" style="width: 800px;">
+      <canvas id="canvas">{{ chart }}</canvas>
+    </div>
+  </div>
+</div>

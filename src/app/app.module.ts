@@ -18,6 +18,7 @@ import { UsersoverviewComponent } from './usersoverview/usersoverview.component'
 import { BlocktypesoverviewComponent } from './blocktypesoverview/blocktypesoverview.component';
 import { NetworkswitcherComponent } from './networkswitcher/networkswitcher.component';
 import {CookieService} from 'ngx-cookie-service';
+import { StatisticspageComponent } from './statisticspage/statisticspage.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {CookieService} from 'ngx-cookie-service';
     VisualizationComponent,
     UsersoverviewComponent,
     BlocktypesoverviewComponent,
-    NetworkswitcherComponent
+    NetworkswitcherComponent,
+    StatisticspageComponent
   ],
   imports: [
     BrowserModule,

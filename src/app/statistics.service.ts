@@ -21,4 +21,10 @@ export class StatisticsService {
     const url = 'http://130.161.119.211:' + (networkType === 'testnet' ? '81' : '80') + '/trustchain/statistics/types';
     return this.http.get(url);
   }
+
+  getBlockCreationStatistics(): Observable<any> {
+    const networkType = this.cookieService.get('networktype');
+    const url = 'http://130.161.119.211:' + (networkType === 'testnet' ? '81' : '80') + '/trustchain/statistics/block_creation';
+    return this.http.get(url);
+  }
 }
