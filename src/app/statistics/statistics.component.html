@@ -1,15 +1,22 @@
 <div class="row row-margin-top text-center">
-    <div class="col-sm-2">
-      <div class="card card-body bg-light">
-        <b>Blocks</b>
-        {{statistics["num_blocks"]}}
-      </div>
+  <div class="col-sm-2">
+    <div class="card card-body bg-light">
+      <b>Blocks</b>
+      {{statistics["num_blocks"]}}
     </div>
+  </div>
 
-    <div class="col-sm-2">
-      <div class="card card-body bg-light">
-        <b>Unique Users</b>
-        {{statistics["num_peers"]}}
-      </div>
+  <div class="col-sm-2">
+    <div class="card card-body bg-light">
+      <b>Unique Users</b>
+      {{statistics["num_peers"]}}
     </div>
+  </div>
+
+  <div class="col-sm-2">
+    <div class="card card-body bg-light">
+      <b>TrustChain Size</b>
+      {{statistics["size"] | bytes }}
+    </div>
+  </div>
 </div>
