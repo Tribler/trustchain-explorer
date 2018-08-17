@@ -2,6 +2,7 @@
   <div class="col-sm-2">
     <div class="card card-body bg-light">
       <b>Blocks</b>
+      <div [hidden]="!showStatisticsLoader" class="loader"></div>
       {{statistics["num_blocks"]}}
     </div>
   </div>
@@ -9,6 +10,7 @@
   <div class="col-sm-2">
     <div class="card card-body bg-light">
       <b>Unique Users</b>
+      <div [hidden]="!showStatisticsLoader" class="loader"></div>
       {{statistics["num_peers"]}}
     </div>
   </div>
@@ -16,6 +18,7 @@
   <div class="col-sm-2">
     <div class="card card-body bg-light">
       <b>TrustChain Size</b>
+      <div [hidden]="!showStatisticsLoader" class="loader"></div>
       {{statistics["size"] | bytes }}
     </div>
   </div>

@@ -10,6 +10,7 @@ import {CookieService} from 'ngx-cookie-service';
 export class StatisticsComponent implements OnInit {
 
   statistics: {string: string};
+  showStatisticsLoader = true;
 
   constructor(private statisticsService: StatisticsService, private cookieService: CookieService) { }
 
@@ -19,7 +20,7 @@ export class StatisticsComponent implements OnInit {
 
   getStatistics(): void {
     this.statisticsService.getStatistics().subscribe(
-      statistics => this.statistics = statistics['statistics']);
+      statistics => { this.statistics = statistics['statistics']; this.showStatisticsLoader = false; });
   }
 
 }
