@@ -12,7 +12,8 @@ export class BlocksService {
 
   getRecentBlocks(limit: number, offset: number): Observable<any> {
     const networkType = this.cookieService.get('networktype');
-    const url = 'http://130.161.119.211:' + (networkType === 'testnet' ? '81' : '80') + '/trustchain/recent?limit=' + limit + '&offset=' + offset;
+    const millis = new Date().getTime();
+    const url = 'http://130.161.119.211:' + (networkType === 'testnet' ? '81' : '80') + '/trustchain/recent?limit=' + limit + '&offset=' + offset + '&maxtime=' + millis;
     return this.http.get<any>(url);
   }
 
