@@ -22,4 +22,12 @@
       {{statistics["size"] | bytes }}
     </div>
   </div>
+
+  <div class="col-sm-2">
+    <div class="card card-body bg-light">
+      <b>Average tx/s (24h)</b>
+      <div [hidden]="!showStatisticsLoader" class="loader"></div>
+      {{ statistics["tx_rate"] | number : '1.2-2'}}
+    </div>
+  </div>
 </div>
