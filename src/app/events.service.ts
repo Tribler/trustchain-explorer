@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Observable} from 'rxjs';
+import {environment} from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class EventsService {
   openEvents(): Observable<any> {
 
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://130.161.119.211/events');
+    xhr.open('GET', 'http://' + environment.trustchain_crawler_ip + '/events');
     this.seenBytes = 0;
 
     const observable = Observable.create((observer) => {
