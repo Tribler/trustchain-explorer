@@ -24,7 +24,7 @@
     "bootstrap-select": "^1.13.10",
     "chart.js": "^2.8.0",
     "core-js": "^2.6.9",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "ngx-cookie-service": "^1.0.10",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.29"
